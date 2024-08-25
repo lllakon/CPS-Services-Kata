@@ -1,0 +1,192 @@
+.prices {
+  &__header {
+    @include block-header;
+    margin-bottom: 31px;
+  }
+
+  .container {
+    @include cards-container;
+    flex-direction: column;
+    overflow: visible;
+    height: auto;
+  }
+
+  &__info {
+    max-width: 421px;
+    margin-top: 41px;
+
+    p {
+      color: #1b1c21;
+      font-size: 14px;
+      margin-bottom: 16px;
+      line-height: 20px;
+    }
+
+    a {
+      font-size: 16px;
+      font-weight: 500;
+
+      svg {
+        margin-left: 9px;
+      }
+    }
+  }
+
+  &__cardsTitle,
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__cardsTitle {
+    margin-bottom: 16px;
+    margin-left: 16px;
+    opacity: 0.72;
+    color: #7e7e82;
+    font-size: 14px;
+
+    p:first-child {
+      width: 372px;
+    }
+
+    p:nth-child(2) {
+      width: 96px;
+    }
+
+    p:nth-child(3) {
+      width: 101px;
+    }
+
+    span {
+      width: 119px;
+      padding: 11px 16px 11px 12px;
+    }
+  }
+
+  &__tableLine {
+    margin-left: 32px;
+    margin-right: 16px;
+  }
+
+  &__card {
+    position: relative;
+    max-width: 100%;
+    background-color: #fff;
+    padding: 23px 16px;
+
+    .prices__card--noTitle {
+      display: none;
+    }
+
+    p:nth-child(2) {
+      width: 372px;
+    }
+
+    p:nth-child(4) {
+      width: 96px;
+    }
+
+    p:nth-child(6) {
+      width: 101px;
+    }
+  }
+
+  .swiper {
+    margin: 0;
+  }
+
+  .swiper-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1438px) {
+  .prices__cardsTitle {
+    margin-bottom: 7px;
+  }
+}
+
+@media (max-width: 870px) {
+  .prices {
+    .container {
+      margin: 0 24px;
+    }
+
+    &__info {
+      margin: 24px 24px 0 24px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .prices__card,
+  .prices__cardsTitle {
+    p:nth-child(2),
+    p:nth-child(4),
+    p:nth-child(6) {
+      margin: 0 10px;
+    }
+  }
+}
+
+// Mobile
+@media (hover: none) and (pointer: coarse) {
+  .prices {
+    &__card--noTitle {
+      display: inline-block;
+      opacity: 0.72;
+      color: #7e7e82;
+      font-size: 14px;
+    }
+
+    .container {
+      margin: 0;
+    }
+
+    &__info {
+      margin-top: 16px;
+      margin-right: 16px;
+      margin-left: 16px;
+    }
+
+    &__card {
+      position: relative;
+      button {
+        position: absolute;
+        bottom: 16px;
+        left: 125px;
+      }
+      p:nth-child(2),
+      p:nth-child(4) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .swiper-wrapper {
+      flex-direction: row;
+    }
+
+    &__cardsTitle {
+      display: none;
+    }
+
+    &__card {
+      width: 260px !important;
+      height: 200px;
+      margin-right: 16px;
+      align-items: baseline;
+      margin-bottom: 41px;
+
+      &:last-child {
+        float: left;
+      }
+
+      p {
+        width: auto;
+      }
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

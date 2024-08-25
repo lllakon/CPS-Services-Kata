@@ -1,0 +1,40 @@
+@import './normalize';
+@import './variables';
+@import './base';
+@import './fonts';
+@import './mixins';
+
+// UI
+@import './ui/button';
+@import './ui/navButton';
+@import './ui/modalWindow';
+@import './ui/input';
+
+// Burger menu
+@import './burgerMenu/burgerMenu';
+@import './burgerMenu/modifiers/burgerMenu--navButton';
+@import './burgerMenu/modifiers/burgerMenu--selected';
+@import './burgerMenu/modifiers/language--selected';
+@import './burgerMenu/modifiers/burgerMenu--active';
+
+// Header
+@import './header/header';
+
+// Modal
+@import './modal/feedback';
+@import './modal/call';
+@import './modal/modifiers/modalWindowActive';
+
+// Main
+@import './main/overlay';
+@import './main/scrollMenu';
+@import './main/info';
+@import './main/brands';
+@import './main/repairsTypes';
+@import './main/prices';
+@import './footer/footer';
+
+@import './main/modifiers/scrollMenu--selected';
+@import './main/modifiers/showMore--rotateArrow';
+@import './main/modifiers/showMore';
+@import './main/modifiers/mainContainer--activeMenu';

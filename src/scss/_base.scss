@@ -1,0 +1,42 @@
+body {
+  font-family: 'TT Lakes', sans-serif;
+  background-color: $bgColor;
+}
+
+p {
+  color: #1b1c21;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  background-color: $paginationColor;
+}
+
+@media (min-width: 1336px) {
+  .mainContainer {
+    width: 100%;
+  }
+
+  .mainContainer:nth-child(-n + 2) {
+    display: flex;
+  }
+}
+
+@media (min-width: 1438px) {
+  .container {
+    margin: 0 auto !important;
+  }
+}
+
+@media (min-width: 970px) {
+  body {
+    background-color: #f8f8f8;
+  }
+}

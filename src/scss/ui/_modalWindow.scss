@@ -1,0 +1,10 @@
+.modalWindow {
+  position: fixed;
+  max-width: 440px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  box-shadow: -16px 0px 52px rgba(14, 24, 80, 0.426);
+  background-color: #fff;
+  z-index: 9;
+}

@@ -1,0 +1,4 @@
+.feedback {
+  @include modalWindowStyles;
+  @include mobileModalWindowStyles;
+}

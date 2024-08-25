@@ -1,0 +1,145 @@
+.navigation {
+  display: none;
+
+  svg {
+    width: 18px;
+    height: 16px;
+  }
+
+  .logo svg {
+    width: 97px;
+    height: 51px;
+  }
+
+  &__leftSide {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+  }
+
+  &__rightSide {
+    display: flex;
+    gap: 16px;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  &__order svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__orderStatus svg {
+    width: 16px;
+    height: 20px;
+  }
+}
+
+.navButton {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #ff3e79;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0;
+  }
+}
+
+.pcHeader {
+  display: flex;
+  gap: 32px;
+  margin-right: 32px;
+  margin-left: auto;
+
+  a {
+    display: inline-block;
+    margin-right: 8px;
+    font-family: 'TT Lakes', sans-serif;
+    gap: 32px;
+    margin-left: auto;
+  }
+
+  &__order a::after {
+    content: '';
+    display: inline-block;
+    vertical-align: -14px;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    border-radius: 50px;
+    background: url(../icons/order.svg) no-repeat #ff3e79 50%;
+  }
+
+  &__orderStatus a::after {
+    content: '';
+    display: inline-block;
+    vertical-align: -14px;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    border-radius: 50px;
+    background: url(../icons/order-status.svg) no-repeat #ff3e79 50%;
+  }
+}
+
+.navLine {
+  width: 2px;
+  height: 32px;
+  background-color: $navLineColor;
+  border-radius: 1px;
+}
+
+/* PC */
+@media (max-width: 1335px) {
+  .navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 18px 24px 18px 24px;
+    border-bottom: 1px solid #d9fff5;
+  }
+
+  .navigation__rightSide,
+  .navigation__leftSide {
+    display: flex;
+  }
+
+  .pcHeader {
+    display: none;
+  }
+}
+
+// /* Mobile */
+@media (max-width: 700px) {
+  .navigation {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 590px) {
+  .navigation {
+    padding: 18px 16px 18px 16px;
+  }
+  .navigation__tabletIcon,
+  .navigation__leftSide .navLine {
+    display: none;
+  }
+
+  .navigation__rightSide .navLine {
+    margin-left: 17px;
+  }
+}
+
+@media (min-width: 590px) {
+  .navigation__tabletIcon {
+    display: inline-block;
+  }
+}

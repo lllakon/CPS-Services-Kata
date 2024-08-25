@@ -1,0 +1,53 @@
+.footer {
+  border-top: 1px solid #d9fff5;
+  margin-top: 50px;
+  margin-bottom: 21px;
+
+  .container {
+    @include cards-container;
+    height: 65px;
+    padding-top: 32px;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.72;
+    color: #7e7e82;
+    font-size: 14px;
+    overflow: visible;
+    p {
+      padding: 0;
+      max-width: 330px;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer .container p:last-child {
+    max-width: 213px;
+  }
+}
+
+@media (max-width: 755px) {
+  .footer {
+    margin-top: 40px;
+    margin-bottom: 19px;
+    .container {
+      padding-top: 16px;
+      flex-direction: column;
+      max-width: 320px;
+      height: 129px;
+      margin: 0 auto;
+
+      p {
+        text-align: center !important;
+
+        &:last-child {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

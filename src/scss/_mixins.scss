@@ -1,0 +1,142 @@
+@mixin block-header {
+  padding: 16px 32px 16px 32px;
+  margin-top: $blockMarginTop;
+  margin-bottom: 24px;
+  background-color: #fff;
+  color: $titleColor;
+  font-size: 16px;
+  font-weight: 400;
+  align-items: center;
+  border-top: 1px solid #d9fff5;
+
+  @media (max-width: 820px) {
+    margin-top: 32px;
+    padding: 16px 24px 16px 24px;
+  }
+
+  @media (max-width: 700px) {
+    padding: 16px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+}
+
+@mixin showAll-btn {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-left: 34px;
+  color: #1b1c21;
+  font-weight: 500;
+
+  svg {
+    width: 7px;
+    height: 10px;
+    margin-right: 16px;
+  }
+
+  @media (max-width: 970px) {
+    margin-left: 24px;
+  }
+
+  @media (max-width: 700px) {
+    margin-left: 16px;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    display: none;
+  }
+}
+
+@mixin cards-container {
+  display: flex;
+  margin-right: 32px;
+  margin-left: 40px;
+  max-width: 1056px;
+  overflow: hidden;
+  height: 160px;
+}
+
+@mixin modalWindowStyles {
+  display: none;
+  z-index: 9;
+
+  &__closeBtn {
+    position: absolute !important;
+    left: -72px;
+    top: 32px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    font-size: 24px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 3px;
+      height: 40px;
+      margin-right: 30px;
+      border-radius: 2px;
+      background-color: #41f6d7;
+    }
+  }
+
+  &__forms {
+    display: flex;
+    flex-direction: column;
+    margin: 0 32px;
+    row-gap: 16px;
+  }
+
+  &__textarea {
+    resize: none;
+    padding-top: 16px;
+    height: 118px;
+  }
+
+  &__submit {
+    p {
+      font-size: 14px;
+      color: #7e7e82;
+    }
+
+    a {
+      color: $btnColor;
+    }
+
+    button {
+      float: right;
+      margin-top: 23px;
+      width: 136px;
+    }
+  }
+}
+
+@mixin mobileModalWindowStyles {
+  @media (max-width: 600px) {
+    min-width: 100%;
+    overflow-y: scroll;
+
+    &__title {
+      &::before {
+        margin-right: 16px;
+      }
+    }
+
+    &__forms {
+      margin: 0 16px;
+    }
+
+    &__closeBtn {
+      position: relative !important;
+      top: 0;
+      left: 0;
+      margin-top: 24px;
+      margin-left: 16px;
+    }
+  }
+}

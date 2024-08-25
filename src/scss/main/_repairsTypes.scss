@@ -1,0 +1,85 @@
+.repairsTypes {
+  .container {
+    @include cards-container;
+  }
+
+  &__header {
+    @include block-header;
+  }
+
+  &__cards {
+    gap: $cardsGap;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    width: 240px;
+    height: 160px;
+    padding: 16px;
+    background-color: $cardsColor;
+
+    svg {
+      margin-top: 88px;
+    }
+  }
+
+  &__showMoreCards {
+    @include showAll-btn;
+  }
+}
+
+@media (min-width: 1455px) {
+  .repairsTypes__showMoreCards {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1336px) {
+  .repairsTypes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 870px) {
+  .repairsTypes {
+    .container {
+      margin: 0 24px;
+    }
+    &__cards {
+      gap: $cardsGapTablet;
+    }
+    &__card {
+      width: 224px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .repairsTypes {
+    .container {
+      gap: $cardsGapMobile;
+    }
+  }
+}
+
+// Mobile
+@media (hover: none) and (pointer: coarse) {
+  .repairsTypes {
+    .container {
+      height: 200px;
+      margin: 0;
+    }
+
+    &__cards {
+      flex-wrap: nowrap;
+    }
+
+    &__card {
+      max-width: 240px;
+    }
+  }
+}

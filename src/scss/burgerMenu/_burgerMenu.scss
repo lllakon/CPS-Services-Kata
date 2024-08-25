@@ -1,0 +1,146 @@
+.burgerMenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.426);
+  z-index: 2;
+  transition: visibility 0s, opacity 0.3s ease;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 19px 24px 32px 24px;
+    min-height: 100vh;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+    a:last-child {
+      margin-left: auto;
+    }
+
+    button {
+      margin-right: 17px;
+    }
+
+    .burgerMenu--logo {
+      width: 97px;
+      height: 51px;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 32px;
+
+    & div:first-child {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    & div:nth-child(2n) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    & div:nth-child(2n) a:nth-child(2n) {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    & div:nth-child(3n) {
+      display: flex;
+      column-gap: 7px;
+    }
+
+    & div:nth-child(3n) a:hover {
+      color: #7e7e82;
+      transition: ease-in 0.1s;
+    }
+  }
+
+  ul li {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    a {
+      padding: 5px 0;
+    }
+
+    a:hover {
+      color: #7e7e82;
+      transition: ease-in 0.1s;
+    }
+  }
+}
+
+@media (min-width: 1336px) {
+  .burgerMenu__header button:first-child {
+    display: none;
+  }
+}
+
+@media (min-width: 1336px) {
+  .burgerMenu {
+    display: block;
+    position: static;
+    box-shadow: none;
+  }
+
+  .burgerMenu__container {
+    padding: 30px 31px 37px 22px;
+    width: 305px;
+  }
+}
+
+@media (max-height: 830px) {
+  .burgerMenu,
+  .burgerMenu__container {
+    height: 100%;
+  }
+
+  .burgerMenu {
+    padding-bottom: 800px;
+
+    &__bottom {
+      position: relative;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .burgerMenu {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .burgerMenu {
+    width: 100%;
+
+    ul li:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-height: 700px) {
+  .burgerMenu {
+    overflow-y: scroll;
+  }
+}
