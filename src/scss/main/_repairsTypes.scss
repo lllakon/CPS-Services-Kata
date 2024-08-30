@@ -1,5 +1,5 @@
 .repairsTypes {
-  .container {
+  .container .swiper {
     @include cards-container;
   }
 
@@ -19,6 +19,8 @@
     height: 160px;
     padding: 16px;
     background-color: $cardsColor;
+
+    color: #1b1c21;
 
     svg {
       margin-top: 88px;
@@ -67,11 +69,18 @@
 }
 
 // Mobile
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 550px) {
   .repairsTypes {
     .container {
       height: 200px;
       margin: 0;
+
+      .swiper {
+        overflow: visible;
+      }
+      .swiper-pagination {
+        bottom: -33px;
+      }
     }
 
     &__cards {

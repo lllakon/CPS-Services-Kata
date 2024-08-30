@@ -1,32 +1,38 @@
-// core version + navigation, pagination modules:
 import Swiper from 'swiper'
 import { Pagination } from 'swiper/modules'
-// import Swiper and modules styles
 
-// init Swiper:
+let swiperInit = false
 
 function detectMobileDevice() {
   if (
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
-    )
+    ) ||
+    window.innerWidth <= 550
   ) {
-    // true for mobile device
+    // mobile device
+    swiperInit = true
     const swiper = new Swiper('.swiper', {
-      // configure Swiper to use modules
       modules: [Pagination],
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
-        // dynamicBullets: true, //включаем поддержку динамических буллетов
-        dynamicMainBullets: 2 //максимальное количество отображаемых буллетов
+        dynamicMainBullets: 2
       },
       widht: 304,
       slidesPerView: 'auto'
     })
-  } else {
-    // false for not mobile device
   }
 }
 
-detectMobileDevice()
+let timer = setTimeout(() => {}, 10)
+window.addEventListener('resize', (e) => {
+  clearTimeout(timer)
+  timer = setTimeout(() => {
+    detectMobileDevice()
+    if (window.innerWidth >= 550 && swiperInit === true) {
+      location.reload()
+      swiperInit = false
+    }
+  }, 120)
+})

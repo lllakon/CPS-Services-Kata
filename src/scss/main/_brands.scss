@@ -1,5 +1,5 @@
 .brands {
-  .container {
+  .container .swiper {
     @include cards-container;
   }
 
@@ -56,11 +56,15 @@
 }
 
 // Mobile
-@media (hover: none) and (pointer: coarse) {
+@media (max-width: 550px) {
   .brands {
     .container {
       height: 116px;
       margin: 0;
+
+      .swiper-pagination {
+        bottom: 50px;
+      }
     }
 
     &__cards {
