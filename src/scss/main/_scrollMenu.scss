@@ -7,7 +7,6 @@
   &__header {
     display: flex;
     align-items: center;
-    margin-bottom: 8px;
 
     &::before {
       content: '';
@@ -33,19 +32,26 @@
 
   &__menu {
     display: flex;
+    margin-top: 8px;
+    margin-bottom: 16px;
     margin-left: 32px;
     overflow: visible;
     flex-wrap: wrap;
-    margin-bottom: 24px;
     align-items: center;
 
-    a {
+    li {
+      display: flex;
+      align-items: center;
+      height: 40px;
       text-wrap: nowrap;
       justify-content: space-around;
       text-align: center;
-      padding: 8px 22px;
       font-weight: 500;
       color: #7e7e82;
+
+      a {
+        padding: 8px 22px;
+      }
 
       &:hover:not(.scrollMenu--selected) {
         background-color: rgba(213, 213, 213, 0.106);
@@ -68,7 +74,9 @@
   }
 
   .scrollMenu__menu {
-    margin-left: 24px;
+    margin-top: 27px;
+    margin-bottom: 16px;
+    margin-left: 40px;
     overflow-x: scroll;
     flex-wrap: nowrap;
   }
@@ -81,5 +89,11 @@
 
   .scrollMenu__menu {
     margin-left: 16px;
+  }
+}
+
+@media (max-width: 590px) {
+  .scrollMenu__menu {
+    margin: 16px 0;
   }
 }

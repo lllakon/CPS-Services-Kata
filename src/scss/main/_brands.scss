@@ -43,14 +43,28 @@
 
 @media (max-width: 870px) {
   .brands {
+    &__cards {
+      gap: $cardsGapTablet;
+    }
+    &__card {
+      width: 224px;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .brands {
     .container {
-      margin: 0 24px;
+      margin-left: 0;
     }
     &__cards {
       gap: $cardsGapTablet;
     }
     &__card {
       width: 224px;
+    }
+    &__showMoreCards {
+      margin-left: 24px;
     }
   }
 }

@@ -49,13 +49,21 @@
 @media (max-width: 870px) {
   .repairsTypes {
     .container {
-      margin: 0 24px;
+      margin: 0;
     }
     &__cards {
       gap: $cardsGapTablet;
     }
     &__card {
       width: 224px;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .repairsTypes {
+    &__showMoreCards {
+      margin-left: 24px;
     }
   }
 }

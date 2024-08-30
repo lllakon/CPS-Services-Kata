@@ -126,6 +126,12 @@
   }
 }
 
+@media (max-width: 806px) {
+  .prices .container {
+    max-width: 719px;
+  }
+}
+
 @media (max-width: 790px) {
   .prices__card,
   .prices__cardsTitle {
@@ -134,6 +140,12 @@
     p:nth-child(6) {
       margin: 0 10px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .prices .container {
+    margin-right: 8px !important;
   }
 }
 
