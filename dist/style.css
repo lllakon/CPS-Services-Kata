@@ -405,13 +405,15 @@ p {
   text-transform: uppercase; }
   .navButton:hover {
     opacity: 0.7; }
-  .navButton svg {
+  .navButton__svg {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 0;
-    max-width: 20px; }
+    max-width: 20px;
+    width: 18px;
+    height: 16px; }
 
 .modalWindow {
   position: fixed;
@@ -576,10 +578,7 @@ p {
 
 .navigation {
   display: none; }
-  .navigation svg {
-    width: 18px;
-    height: 16px; }
-  .navigation .logo svg {
+  .navigation .logo__image {
     width: 97px;
     height: 51px; }
   .navigation__leftSide {
@@ -597,20 +596,6 @@ p {
   .navigation__orderStatus svg {
     width: 16px;
     height: 20px; }
-
-.navButton {
-  display: inline-block;
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background-color: #ff3e79; }
-  .navButton svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 0; }
 
 .pcHeader {
   display: flex;
@@ -825,7 +810,7 @@ p {
       margin-right: 30px;
       border-radius: 0px 50px 50px 0px;
       background-color: #41f6d7; }
-    .scrollMenu__header h1 {
+    .scrollMenu__header--header {
       font-weight: 700;
       font-size: 28px; }
     .scrollMenu__header p {
@@ -840,7 +825,7 @@ p {
     overflow: visible;
     flex-wrap: wrap;
     align-items: center; }
-    .scrollMenu__menu li {
+    .scrollMenu__menu .scrollMenu__item {
       display: flex;
       align-items: center;
       height: 40px;
@@ -849,9 +834,9 @@ p {
       text-align: center;
       font-weight: 500;
       color: #7e7e82; }
-      .scrollMenu__menu li a {
+      .scrollMenu__menu .scrollMenu__item .scrollMenu__item--link {
         padding: 8px 22px; }
-      .scrollMenu__menu li:hover:not(.scrollMenu--selected) {
+      .scrollMenu__menu .scrollMenu__item:hover:not(.scrollMenu--selected) {
         background-color: rgba(213, 213, 213, 0.106);
         border-radius: 6px;
         transition: background-color 0.1s; }
@@ -1098,7 +1083,7 @@ p {
   padding: 16px;
   background-color: #fff;
   color: #1b1c21; }
-  .repairsTypes__card svg {
+  .repairsTypes__card .repairsTypes__card--arrow {
     margin-top: 88px; }
 
 .repairsTypes__showMoreCards {
@@ -1145,7 +1130,8 @@ p {
 @media (max-width: 550px) {
   .repairsTypes .container {
     height: 200px;
-    margin: 0; }
+    margin: 0;
+    overflow: hidden; }
     .repairsTypes .container .swiper {
       overflow: visible; }
     .repairsTypes .container .swiper-pagination {
