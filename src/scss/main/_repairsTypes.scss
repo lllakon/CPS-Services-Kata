@@ -22,7 +22,7 @@
 
     color: #1b1c21;
 
-    svg {
+    .repairsTypes__card--arrow {
       margin-top: 88px;
     }
   }
@@ -82,6 +82,7 @@
     .container {
       height: 200px;
       margin: 0;
+			overflow: hidden;
 
       .swiper {
         overflow: visible;

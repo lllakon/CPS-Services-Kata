@@ -1,12 +1,7 @@
 .navigation {
   display: none;
 
-  svg {
-    width: 18px;
-    height: 16px;
-  }
-
-  .logo svg {
+  .logo__image {
     width: 97px;
     height: 51px;
   }
@@ -35,22 +30,6 @@
   }
 }
 
-.navButton {
-  display: inline-block;
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  background-color: #ff3e79;
-
-  svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 0;
-  }
-}
 
 .pcHeader {
   display: flex;
